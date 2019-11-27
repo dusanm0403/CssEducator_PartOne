@@ -1,0 +1,178 @@
+@keyframes transform2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes width {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    width: 70%;
+    opacity: 1;
+  }
+}
+
+@keyframes width1 {
+  0% {
+    width: 20%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 140% center;
+  }
+}
+
+.Slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Slide--Heading,
+.Slide--Content {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Slide--Heading {
+  height: 20%;
+  width: 0%;
+  margin: 0 auto;
+  border-bottom: 1px solid #d4d4d4;
+  animation: width 1s cubic-bezier(0.19, 1, 0.22, 1) .9s 1 normal forwards;
+}
+
+.Slide--Heading h2 {
+  font-size: 2rem;
+  transition: 1.2s all cubic-bezier(0.47, 0, 0.745, 1.5);
+  text-transform: capitalize;
+  opacity: 0;
+  transform: perspective(0) rotateX(0);
+  text-align: center;
+  cursor: pointer;
+  text-shadow: 1px 4px 10px rgba(4, 4, 4, 0.9);
+  animation: fadeIn 2s cubic-bezier(0.215, 0.610, 0.355, 1) 1.8s 1 normal forwards;
+}
+
+.Slide--Content {
+  height: 70%;
+  align-items: flex-start;
+  animation: transform2 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) 3s 1 normal forwards;
+  opacity: 0;
+  transform: translateX(-150%);
+}
+
+.Slide--Content p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  border-left: 1.5px solid #000;
+}
+
+.Slide--Content p:hover {
+  transition: .4s ease-out all;
+  background: linear-gradient(to right, #404040 45%, #fff 90%, #404040 91%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip .8s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.Slide--Heading h2:hover::after {
+  content: "Example";
+  position: absolute;
+  right: 0;
+  font-size: 4rem;
+  background-color: #eee;
+  color: rgba(19, 19, 19, 0.4);
+  transition: .6s all ease-in-out;
+}
+
+.Slide--Heading h2:hover {
+  transform: perspective(400px) rotateX(360deg);
+  transition: 1.2s all cubic-bezier(0.47, 0, 0.745, 1.5);
+}
+
+@media screen and (min-width: 768px) {
+  .Slide--Heading h2 {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .Slide--Heading,
+  .Slide--Content {
+    padding: 1.5rem 3rem;
+  }
+
+  .Slide--Content p {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Slide--Heading h2 {
+    font-size: 3rem;
+  }
+
+  .Slide--Heading,
+  .Slide--Content {
+    padding: 2rem 4rem;
+  }
+
+  .Slide--Content p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .Slide--Heading h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Slide--Heading h2 {
+    font-size: 4rem;
+  }
+}

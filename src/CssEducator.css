@@ -1,0 +1,37 @@
+.CssEducator {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.CssEducator .Prev,
+.CssEducator .Next {
+  position: absolute;
+  left: 50%;
+  cursor: pointer;
+  padding: 1rem;
+  opacity: 1;
+  transition: .3s opacity cubic-bezier(0.55, 0.055, 0.675, 1);
+}
+
+.Prev:hover,
+.Next:hover {
+  opacity: 0.5;
+  transition: .3s opacity cubic-bezier(0.55, 0.055, 0.675, 1);
+}
+
+.Prev {
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+.Next {
+  bottom: 0;
+  transform: rotate(180deg) translate(50%, 0);
+}
+
+.Prev--Hidden,
+.Next--Hidden {
+  opacity: 0 !important;
+  transition: .2s opacity cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
