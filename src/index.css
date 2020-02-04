@@ -1,5 +1,10 @@
+/* fonts added */
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+
+/* CSS reset, global settings */
 
 * {
   box-sizing: border-box;
@@ -7,6 +12,7 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  /* sets relative size for 1rem */
   font-size: 16px;
   font-family: 'Montserrat', serif;
 }
